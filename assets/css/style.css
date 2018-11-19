@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #eee;
     color: #444;
@@ -13,6 +14,7 @@ a {
     color: #12AAEB;
     text-decoration: none;
 }
+
 a:hover {
     color: #FF4C4C;
 }
@@ -69,33 +71,38 @@ header#top-bar {
     margin-bottom: 20px;
     min-height: 60px;
 }
+
 header#top-bar h1 {
     float: left;
     font-size: 1.2rem;
     line-height: 60px;
     width: 300px;
 }
+
 header#top-bar h1 a {
     color: #fff;
     text-decoration: none;
 }
+
 header#top-bar ul {
     float: right;
     list-style: none;
 }
+
 header#top-bar ul li {
     display: inline-block;
-    padding-top: 18px;
+    padding-top: 19px;
 }
+
 header#top-bar ul li a {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-decoration: none;
-    padding: 24px 10px;;
+    padding: 23px 10px;
 }
+
 header#top-bar ul li a:hover {
     background-color: #003c5e;
-    padding: 24px 10px;
 }
 
 .container {
@@ -119,12 +126,14 @@ header#top-bar ul li a:hover {
 .form-field {
     margin-bottom: 20px;
 }
-.form-field label{
+
+.form-field label {
     display: block;
     font-weight: 400;
     margin-bottom: 5px;
 }
-.btn{
+
+.btn {
     background-color: #ddd;
     border: none;
     color: #666;
@@ -132,35 +141,44 @@ header#top-bar ul li a:hover {
     padding: 10px 20px;
     box-shadow: 1px 1px 0 #ccc;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #d5d5d5;
 }
+
 .btn:active {
     box-shadow: inset 1px 1px 5px #555;
     color: #fff;
 }
+
 .btn:focus {
     outline: 0;
 }
-.btn.red{
+
+.btn.red {
     color: #fff;
     background-color: #FF4C4C;
 }
-.btn.red:hover{
+
+.btn.red:hover {
     background-color: #e54444;
 }
-.btn.green{
+
+.btn.green {
     color: #fff;
     background-color: #4ca64c;
 }
-.btn.green:hover{
+
+.btn.green:hover {
     background-color: #449544;
 }
-.btn.blue{
+
+.btn.blue {
     color: #fff;
     background-color: #4E90EC;
 }
-.btn.blue:hover{
+
+.btn.blue:hover {
     background-color: #4681d4;
 }
 

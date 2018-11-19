@@ -19,16 +19,16 @@
                 </h1>
                 <nav class="main-nav">
                     <ul>
-                        <?php if(isset($_SESSION['logged_in'])): ?>
-                        <li><a href="<?= base_url(); ?>"><i class="fas fa-home"></i> Strona Główna</a></li>
-                        <li><a href="<?= base_url('meetings'); ?>"><i class="fas fa-clock"></i> Zjazdy</a></li>
-                        <li><a href="<?= base_url('lessons'); ?>"><i class="fas fa-book-open"></i> Lekcje</a></li>
-                        <li><a href="<?= base_url('subjects'); ?>"><i class="fas fa-list"></i> Tematy</a></li>
-                        <li><a href="<?= base_url('teachers'); ?>"><i class="fas fa-users"></i> Nauczyciele</a></li>
-                        <li><a href="<?= base_url('logout'); ?>"><i class="fas fa-sign-out-alt"></i> Wyloguj</a></li>
+                        <?php if (isset($_SESSION['logged_in'])) : ?>
+                        <li><a href="<?php echo base_url();?>"><i class="fa fa-home"></i> Strona Główna</a></li>
+                        <li><a href="<?php echo base_url('meetings');?>"><i class="fa fa-clock"></i> Zjazdy</a></li>
+                        <li><a href="<?php echo base_url('lessons');?>"><i class="fa fa-book-open"></i> Lekcje</a></li>
+                        <li><a href="<?php echo base_url('subjects');?>"><i class="fa fa-list"></i> Tematy</a></li>
+                        <li><a href="<?php echo base_url('teachers');?>"><i class="fa fa-users"></i> Nauczyciele</a></li>
+                        <li><a href="<?php echo base_url('logout');?>"><i class="fa fa-sign-out-alt"></i> Wyloguj</a></li>
                         <?php else: ?>
-                        <li><a href="<?= base_url('login'); ?>"><i class="fas fa-sign-in-alt"></i> Zaloguj</a></li>
-                        <?php endif; ?>
+                        <li><a href="<?php echo base_url('login');?>"><i class="fa fa-sign-in-alt"></i> Zaloguj</a></li>
+                        <?php endif;?>
                     </ul>
                 </nav>
             </div>
@@ -40,7 +40,7 @@
             </div>
         </footer>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-        <script src="<?php echo base_url() ?>assets/js/script.js"></script>
+        <script src="<?php echo base_url('assets/js/script.js') ?>"></script>
     </body>
 
 </html>
