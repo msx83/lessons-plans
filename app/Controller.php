@@ -14,7 +14,10 @@ class Controller
     public function index()
     {
         $this->_logged_in();
-
+        
+        $this->view->assign('next_meeting', $this->db->getNextMeeting());
+        $this->view->assign('count_hours', $this->db->countHours());
+        $this->view->assign('count_days', $this->db->countMeetings());
         $this->view->assign('title', 'Strona główna');
         $this->view->render('index');
     }
@@ -75,12 +78,12 @@ class Controller
     // auth methods
     public function login()
     {
+        unset($_SESSION['login_error']);
         $email = filter_input(INPUT_POST, 'login', FILTER_VALIDATE_EMAIL);
         $password = filter_input(INPUT_POST, 'password');
 
         if (isset($email) && isset($password)) {
             if ($this->db->login($email, $password)) {
-                unset($_SESSION['login_error']);
                 header('location: index');
             }
             $_SESSION['login_error'] = 'Niepoprawny login lub hasło.<br>Spróbuj ponownie.';
