@@ -11,5 +11,8 @@
         </div>
         <input type="submit" value="Zaloguj" class="btn blue"/>
         </form>
+        <?php if(isset($_SESSION['login_error'])): ?>
+        <p class="login_error"><?php echo $_SESSION['login_error']; ?></p>
+        <?php endif; ?>
     </div>
 </section>

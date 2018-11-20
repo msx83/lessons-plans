@@ -80,8 +80,10 @@ class Controller
 
         if (isset($email) && isset($password)) {
             if ($this->db->login($email, $password)) {
+                unset($_SESSION['login_error']);
                 header('location: index');
             }
+            $_SESSION['login_error'] = 'Niepoprawny login lub hasło.<br>Spróbuj ponownie.';
         }
         
         $this->view->assign('title', 'Zaloguj');
