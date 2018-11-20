@@ -31,6 +31,28 @@ class Database
             }
         }
     }
+    
+    public function getNextMeeting()
+    {
+        $res = $this->db->query('SELECT * FROM meetings WHERE date > NOW() LIMIT 1');
+        return $res->fetch(PDO::FETCH_OBJ);
+    }
+    
+    public function countHours()
+    {
+        $res = $this->db->query("SELECT COUNT(*) hours
+        FROM lessons l
+        LEFT JOIN meetings m ON l.meeting_id=m.id
+        LEFT JOIN subjects s ON l.subject_id=s.id
+        WHERE m.`date` > NOW()
+        AND s.`name` NOT LIKE '%grupa 1%'");
+        return $res->fetch(PDO::FETCH_OBJ);
+    }
+    public function countMeetings()
+    {
+        $res = $this->db->query("SELECT COUNT(*) meetings FROM meetings WHERE `date` > NOW()");
+        return $res->fetch(PDO::FETCH_OBJ);
+    }
 
     public function getHours()
     {

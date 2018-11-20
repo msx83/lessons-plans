@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -98,7 +99,7 @@ header#top-bar ul li a {
     color: #fff;
     font-size: 0.7rem;
     text-decoration: none;
-    padding: 23px 10px;
+    padding: 23px 7px;
 }
 
 header#top-bar ul li a:hover {
@@ -107,7 +108,7 @@ header#top-bar ul li a:hover {
 
 .container {
     margin: 0 auto;
-    width: 90%;
+    width: 960px;
 }
 
 #main {
@@ -121,16 +122,6 @@ header#top-bar ul li a:hover {
     box-shadow: 0 2px 3px rgba(100, 100, 100, 0.4);
     padding: 20px 15px;
     width: 100%;
-}
-
-.form-field {
-    margin-bottom: 20px;
-}
-
-.form-field label {
-    display: block;
-    font-weight: 400;
-    margin-bottom: 5px;
 }
 
 .btn {
@@ -182,6 +173,16 @@ header#top-bar ul li a:hover {
     background-color: #4681d4;
 }
 
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
 .form-field input[type=text],
 .form-field input[type=date],
 .form-field input[type=password],
@@ -202,7 +203,45 @@ footer p {
     margin: 0 auto;
 }
 
+.boxes {
+    display: flex;
+    justify-content: space-between;
+}
+.boxes .box {
+    flex: 1;
+    margin-right: 5px;
+}
+.boxes .box .text {
+    font-size: 1.8rem;
+    padding: 25px 10px;
+}
+.boxes .box .description {
+    background-color: rgba(0,0,0,0.2);
+    padding: 10px 5px;
+    font-size: 0.7rem;
+    text-align: right;
+}
+.boxes .box-red {
+    background-color: #ff5050;
+    color: #fff;
+}
+.boxes .box-blue {
+    background-color: #6699ff;
+    color: #fff;
+}
+.boxes .box-orange {
+    background-color: #ff9933;
+    color: #fff;
+}
+.boxes .box-green {
+    background-color: #33cc33;
+    color: #fff;
+}
+
 .login_error {
+    border: 1px solid red;
+    border-radius: 7px;
     color: red;
-    padding: 5px 0;
+    padding: 10px;
+    margin-bottom: 20px;
 }
