@@ -201,3 +201,8 @@ footer p {
     max-width: 350px;
     margin: 0 auto;
 }
+
+.login_error {
+    color: red;
+    padding: 5px 0;
+}
