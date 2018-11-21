@@ -12,12 +12,12 @@
     </head>
 
     <body>
-        <header id="top-bar">
+        <header id="page-header">
             <div class="container">
-                <h1 class="brand">
+                <h1>
                     <a href="<?php echo base_url(); ?>" title="E14 Szczegółowy plan zajęć">E14 Szczegółowy plan zajęć</a>
                 </h1>
-                <nav class="main-nav">
+                <nav>
                     <ul>
                         <?php if (isset($_SESSION['logged_in'])) : ?>
                         <li><a href="<?php echo base_url();?>"><i class="fa fa-home"></i> Strona Główna</a></li>
@@ -33,10 +33,12 @@
                 </nav>
             </div>
         </header>
-        <?php echo $this->data['yield']; ?>
+        <div id="main-content-tet">
+            <?php echo $this->data['yield']; ?>
+        </div>
         <footer id="page-footer">
             <div class="container">
-                <p>Created by: Marcin Snoch</p>
+                <p>Created by: <a href="mailto:marcin.msx@gmail.com">Marcin Snoch</a></p>
             </div>
         </footer>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>

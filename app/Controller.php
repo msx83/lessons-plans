@@ -86,7 +86,7 @@ class Controller
             if ($this->db->login($email, $password)) {
                 header('location: index');
             }
-            $_SESSION['login_error'] = 'Niepoprawny login lub hasło.<br>Spróbuj ponownie.';
+            $_SESSION['login_error'] = 'Nieprawidłowy login lub hasło! Spróbuj jeszcze raz.';
         }
         
         $this->view->assign('title', 'Zaloguj');
